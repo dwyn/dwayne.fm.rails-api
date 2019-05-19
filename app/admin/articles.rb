@@ -1,17 +1,25 @@
 ActiveAdmin.register Article do
-  permit_params :title, :description, :wordcount, :timestamp
+  permit_params :title, :description, :body, :wordcount, :timestamp
 
-# See permitted parameters documentation:
-# https://github.com/activeadmin/activeadmin/blob/master/docs/2-resource-customization.md#setting-up-strong-parameters
-#
-# permit_params :list, :of, :attributes, :on, :model
-#
-# or
-#
-# permit_params do
-#   permitted = [:permitted, :attributes]
-#   permitted << :other if params[:action] == 'create' && current_user.admin?
-#   permitted
-# end
+  # Added publish / unpublish functionality
+  action_item :publish, only: :show do
+    link_to "Publish", publish_admin_article_path(article), method: put if !article.publish?
+  end
+
+  action_item :publish, only: :show do
+    link_to "Unpublish", publish_admin_article_path(article), method: put if article.publish?
+  end
+
+  member_action :publish, method: :put do
+    article = Article.find(params[:id])
+    article.update(published_at: Time.zone.now)
+    redirect_to admin_article_path(article)
+  end
+
+  member_action :unpublish, method: :put do
+    article = Article.find(params[:id])
+    article.update(published_at: nil)
+    redirect_to admin_article_path(article)
+  end
 
 end
