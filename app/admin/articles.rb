@@ -1,5 +1,5 @@
 ActiveAdmin.register Article do
-  permit_params :title, :description, :body, :wordcount, :timestamp
+  permit_params :title, :description, :body, :user_id, :wordcount, :timestamp
 
   # Added publish / unpublish functionality
   action_item :publish, only: :show do
@@ -7,7 +7,7 @@ ActiveAdmin.register Article do
   end
 
   action_item :publish, only: :show do
-    link_to "Unpublish", publish_admin_article_path(article), method: put if article.publish?
+    link_to "Unpublish", unpublish_admin_article_path(article), method: put if article.publish?
   end
 
   member_action :publish, method: :put do

@@ -5,6 +5,7 @@ class CreateArticles < ActiveRecord::Migration[5.2]
       t.text    :body
       t.text    :description
       t.integer :wordcount
+      t.integer :user_id
 
       t.timestamps
     end
