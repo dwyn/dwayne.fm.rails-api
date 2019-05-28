@@ -9,7 +9,7 @@ class BlogLogo extends Component {
       return (
         <Link className="blog-logo" to={url || "/"}>
           {/* style={{ boxShadow: "none" }}> */}
-          <img src={logo} alt={title} />
+          {/* <img src={logo} alt={title} /> */}
         </Link>
       );
     }
