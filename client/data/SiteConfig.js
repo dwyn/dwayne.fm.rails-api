@@ -9,7 +9,7 @@ module.exports = {
   siteUrl: "https://dwayne.fm", // Domain of your website without pathPrefix.
   pathPrefix: "/dwayne.fm", // Prefixes all links. For cases when deployed to example.github.io/gatsby-starter-casper/.
   siteDescription:
-    "Musings, Music and Modern Day ieroglyphs.", // Website description used for RSS feeds/meta description tag.
+    "Musings, Music and Modern Day Hieroglyphs.", // Website description used for RSS feeds/meta description tag.
   siteCover:
     "https://haysclark.github.io/gatsby-starter-casper/images/blog-cover.jpg", // Optional, the cover image used in header for home page. e.g: "/images/blog-cover.jpg",
   siteNavigation: true, // If navigation is enabled the Menu button will be visible
