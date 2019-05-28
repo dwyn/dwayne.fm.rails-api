@@ -21,7 +21,7 @@ module.exports = {
   // disqusShortname: "https-vagr9k-github-io-gatsby-advanced-starter", // enables Disqus comments, visually deviates from original Casper theme.
   siteSocialUrls: [
     "https://github.com/dwyn",
-    "https://twitter.com/dwyn",
+    "https://twitter.com/dwyn", 
     "mailto:harmon.dwayne@gmail.com"
   ],
   postDefaultCategoryID: "Tech", // Default category for posts.
