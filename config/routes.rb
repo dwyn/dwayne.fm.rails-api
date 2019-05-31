@@ -10,4 +10,9 @@ Rails.application.routes.draw do
 
   end
 
+  resources :recipe do
+    resources :ingredients
+  end
+
+
 end
