@@ -6,13 +6,13 @@ var plugins = [{
       options: {"plugins":[]},
     },{
       plugin: require('/Users/dwyn/Development/code.2/dwayne.FM.rails/client/node_modules/gatsby-plugin-google-analytics/gatsby-ssr'),
-      options: {"plugins":[],"trackingId":"UA-111982167-1"},
+      options: {"plugins":[],"trackingId":"UA-140813777-1"},
     },{
       plugin: require('/Users/dwyn/Development/code.2/dwayne.FM.rails/client/node_modules/gatsby-plugin-sitemap/gatsby-ssr'),
       options: {"plugins":[]},
     },{
       plugin: require('/Users/dwyn/Development/code.2/dwayne.FM.rails/client/node_modules/gatsby-plugin-manifest/gatsby-ssr'),
-      options: {"plugins":[],"name":"Gatsby v2 Casper Starter","short_name":"Gatsby v2 Casper Starter","description":"A Casper themed GatsbyJS stater based on the Advanced Starter.","start_url":"/gatsby-starter-casper","background_color":"#e0e0e0","theme_color":"#c62828","display":"minimal-ui","icons":[{"src":"/logos/logo-192x192.png","sizes":"192x192","type":"image/png"},{"src":"/logos/logo-512x512.png","sizes":"512x512","type":"image/png"}]},
+      options: {"plugins":[],"name":"dwayne.fm","short_name":"dwayne.fm","description":"Musings, Music and Modern Day Hieroglyphs.","start_url":"/dwayne.fm","background_color":"#e0e0e0","theme_color":"#c62828","display":"minimal-ui","icons":[{"src":"/logos/logo-192x192.png","sizes":"192x192","type":"image/png"},{"src":"/logos/logo-512x512.png","sizes":"512x512","type":"image/png"}]},
     },{
       plugin: require('/Users/dwyn/Development/code.2/dwayne.FM.rails/client/node_modules/gatsby-plugin-offline/gatsby-ssr'),
       options: {"plugins":[]},

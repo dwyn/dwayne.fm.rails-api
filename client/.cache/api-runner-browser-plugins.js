@@ -3,7 +3,7 @@ module.exports = [{
       options: {"plugins":[]},
     },{
       plugin: require('/Users/dwyn/Development/code.2/dwayne.FM.rails/client/node_modules/gatsby-plugin-google-analytics/gatsby-browser.js'),
-      options: {"plugins":[],"trackingId":"UA-111982167-1"},
+      options: {"plugins":[],"trackingId":"UA-140813777-1"},
     },{
       plugin: require('/Users/dwyn/Development/code.2/dwayne.FM.rails/client/node_modules/gatsby-plugin-nprogress/gatsby-browser.js'),
       options: {"plugins":[],"color":"#c62828"},

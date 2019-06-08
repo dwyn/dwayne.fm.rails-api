@@ -11,7 +11,7 @@ Rails.application.routes.draw do
   end
 
   resources :recipe do
-    resources :ingredients
+    resources :ingredients     
   end
 
 
