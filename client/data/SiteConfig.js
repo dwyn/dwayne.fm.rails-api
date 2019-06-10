@@ -1,11 +1,11 @@
 module.exports = {
   blogPostDir: "sample-posts", // The name of directory that contains your posts.
-  blogAuthorDir: "all_authors", // The name of directory that contains your 'authors' folder.
+  blogAuthorDir: "sample_authors", // The name of directory that contains your 'authors' folder.
   blogAuthorId: "dwayne.", // The default and fallback author ID used for blog posts without a defined author.
   siteTitle: "dwayne.fm", // Site title.
   siteTitleAlt: "dwayne.fm", // Alternative site title for SEO.
   siteLogo:
-    "", // Logo used for SEO and manifest. e.g. "/logos/logo-1024.png",
+    "https://haysclark.github.io/gatsby-starter-casper/logos/logo-1024.png", // Logo used for SEO and manifest. e.g. "/logos/logo-1024.png",
   siteUrl: "https://dwayne.fm", // Domain of your website without pathPrefix.
   pathPrefix: "/dwayne.fm", // Prefixes all links. For cases when deployed to example.github.io/gatsby-starter-casper/.
   siteDescription:

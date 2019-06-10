@@ -1,7 +1,7 @@
 class ArticleController < ApplicationController
 
   def index
-    @articles = Article.select("id, title").all
+    @articles = Article.all
     render json: @articles.to_json
   end
 
