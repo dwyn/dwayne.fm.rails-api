@@ -4,8 +4,8 @@ Rails.application.routes.draw do
   devise_for :admin_users, ActiveAdmin::Devise.config
   ActiveAdmin.routes(self)
 
-  resources :article
-  resources :project
+  resources :articles
+  resources :projects
   # scope '/api' do
 
   # end
