@@ -45,7 +45,7 @@ module.exports = {
   ],
   // Copyright string for the footer of the website and RSS feed.
   copyright: {
-    label: "e.c.♥️'su" // Label used before the year
+    label: "e.c. ♥️'s u" // Label used before the year
     // year: "2019" // optional, set specific copyright year or range of years, defaults to current year
   },
   themeColor: "#c62828", // Used for setting manifest and progress theme colors.
