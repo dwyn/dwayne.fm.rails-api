@@ -5,11 +5,11 @@ class App extends Component {
   constructor () {
     super()
     this.state = {}
-    this.getDrinks = this.getDrinks.bind(this)
-    this.getDrink = this.getDrink.bind(this)
+    this.getArticles = this.getArticles.bind(this)
+    this.getArticle = this.getArticle.bind(this)
   }
   componentDidMount () {
-    this.getDrinks()
+    this.getArticles()
   }
   fetch (endpoint) {
     return new Promise((resolve, reject) => {
@@ -19,54 +19,28 @@ class App extends Component {
       .catch(error => reject(error))
     })
   }
-  getDrinks () {
-    this.fetch('api/drinks')
-      .then(drinks => {
-        this.setState({drinks: drinks})
-        drinks[0] && this.getDrink(drinks[0].id)
-      })
+  getArticles () {
+    this.fetch('api/articles')
+    .then(articles => {
+      if (articles.length) {
+        this.setState({ articles: articles })
+        this.getArticle(articles[0].id)
+      } else {
+        this.setState({drinks: []})
+      }
+    })
   }
-  getDrink (id) {
-    this.fetch(`api/drinks/${id}`)
-      .then(drink => this.setState({drink: drink}))
+  getArticle (id) {
+    this.fetch(`api/articles/${id}`)
+      .then(article => this.setState({article: article}))
   }
   render () {
-    let {drinks, drink} = this.state
-    return drinks
-    ? <Container text>
-        <Header as='h2' icon textAlign='center'>
-        <Icon name='cocktail' circular />
-        <Header.Content>
-          List of Ingredients
-        </Header.Content>
-      </Header>
-      <Button.Group fluid widths={drinks.length}>
-        {Object.keys(drinks).map((key) => {
-          return <Button active={drink && drink.id === drinks[key].id} fluid key={key} onClick={() => this.getDrink(drinks[key].id)}>
-            {drinks[key].title}
-          </Button>
-        })}
-      </Button.Group>
-      <Divider hidden />
-      {drink &&
-        <Container>
-          <Header as='h2'>{drink.title}</Header>
-          {drink.description && <p>{drink.description}</p>}
-          {drink.ingredients &&
-            <Segment.Group>
-              {drink.ingredients.map((ingredient, i) => <Segment key={i}>{ingredient.description}</Segment>)}
-            </Segment.Group>
-          }
-          {drink.steps && <p>{drink.steps}</p>}
-        </Container>
-      }
-    </Container>
-    : <Container text>
-      <Dimmer active inverted>
-        <Loader content='Loading' />
-      </Dimmer>
-    </Container>
+    let {articles, article} = this.state
+    return 
+      <React.Fragment>
+        <h1>articles </h1>
+      </React.Fragment>
+    }
   }
-}
-
-export default App
+  
+  export default App
