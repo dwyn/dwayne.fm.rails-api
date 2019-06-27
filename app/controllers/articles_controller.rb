@@ -9,7 +9,7 @@ class ArticlesController < ApplicationController
   # GET /articles/:id
   def show
     @article = Article.find(params[:id])
-    render json: @drink.to_json
+    render json: @article.to_json
   end
 
 end

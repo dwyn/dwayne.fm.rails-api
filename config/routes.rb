@@ -6,8 +6,8 @@ Rails.application.routes.draw do
 
 
   scope '/api' do
-    resources :articles, only: [:index]
-    resources :projects, only: [:index]
+    resources :articles, only: [:index, :show]
+    resources :projects, only: [:index, :show]
   end
   
 end
