@@ -33,33 +33,15 @@ class App extends Component {
 
   getArticle (id) {
     this.fetch(`/api/articles/${id}`)
-      .then(article => this.setState({article: article}))
+      .then(article => this.setState({ article: article }))
   }
 
-  render () {
-    let {articles, article} = this.state
-    return articles
-      ? <Container text>
-        
-        <Header as='h2' icon textAlign='center' color='teal'>
-          <Icon name='unordered list' circular />
-          <Header.Content>
-            Test...
-          </Header.Content>
-        </Header>
+  render() {
+    let { articles, article } = this.state
+    return (
 
-        <Divider hidden section />
-        {articles && articles.length
-          ? <Button.Group color='teal' fluid widths={articles.length}>
-            {Object.keys(articles).map((key) => {
-              return <Button active={article && article.id === article[key].id} fluid key={key} onClick={() => this.getArticle(articles[key].id)}>
-                {articles[key].title}
-              </Button>
-            })}
-          </Button.Group>
-          : <Container textAlign='center'>No articles found?.</Container>
-        }
-    }
+
   }
+}
   
   export default App
