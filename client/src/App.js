@@ -1,5 +1,6 @@
 import React, { Component } from 'react'
-import { Container, Header, Segment, Button, Icon, Dimmer, Loader, Divider } from 'semantic-ui-react'
+import Articles from './Articles.js'
+// import { Container, Header, Segment, Button, Icon, Dimmer, Loader, Divider } from 'semantic-ui-react'
 
 class App extends Component {
   constructor () {
@@ -7,12 +8,13 @@ class App extends Component {
     this.state = {}
     this.getArticles = this.getArticles.bind(this)
     this.getArticle = this.getArticle.bind(this)
+    debugger
   }
 
-  componentDidMount () {
+  componentDidMount() {
     this.getArticles()
   }
-
+  
   fetch(endpoint) {
     return window.fetch(endpoint)
       .then(response => response.json())
@@ -21,13 +23,13 @@ class App extends Component {
 
   getArticles () {
     this.fetch('/api/articles')
-    .then(articles => {
-      if (articles.length) {
-        this.setState({ articles: articles })
-        this.getArticle(articles[0].id)
-      } else {
-        this.setState({articles: []})
-      }
+      .then(articles => {
+        if (articles.length) {
+          this.setState({ articles: articles })
+          this.getArticle(articles[0].id)
+        } else {
+          this.setState({articles: []})
+        }
     })
   }
 
@@ -36,12 +38,17 @@ class App extends Component {
       .then(article => this.setState({ article: article }))
   }
 
+
   render() {
     let { articles, article } = this.state
     return (
+      <div>
+        {
 
-
+        }
+      </div>
+    )
   }
 }
   
-  export default App
+export default App
