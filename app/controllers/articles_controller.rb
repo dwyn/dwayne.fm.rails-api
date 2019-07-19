@@ -6,7 +6,7 @@ class ArticlesController < ApplicationController
     render json: @articles.to_json
   end
 
-  # GET /articles/:id
+  # GET api/articles/:id
   def show
     @article = Article.find(params[:id])
     render json: @article.to_json
