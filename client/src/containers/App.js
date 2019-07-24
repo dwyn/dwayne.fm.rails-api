@@ -1,5 +1,5 @@
 import React, { Component } from 'react'
-// import 'App.css'
+import 'App.css'
 import Articles from '../Articles.js'
 // import { Container, Header, Segment, Button, Icon, Dimmer, Loader, Divider } from 'semantic-ui-react'
 
@@ -17,16 +17,15 @@ class App extends Component {
   
   getArticles () {
     fetch('/api/articles')
-      .then(response => response.json())
-      .then(articles => {
-        if (articles.length) {
-          this.setState({ articles: articles })
-          // this.getArticle(articles[0].id)
-        } else {
-          this.setState({articles: []})
-        }
-      })
-      // .catch(error => console.log(error))
+    .then(response => response.json())
+    .then(articles => {
+      if (articles.length) {
+        this.setState({ articles: articles })
+        // this.getArticle(articles[0].id)
+      } else {
+        this.setState({articles: []})
+      }
+    })
   }
 
 //   getArticle (id) {
