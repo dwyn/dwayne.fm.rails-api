@@ -1,12 +1,14 @@
-import React, { Component } from 'react';
+import React from 'react';
 
-export default class Articles extends Component {
-  render() {
-
-    return (
-      <div className="wrapper">
-        <h1>These are some articles</h1>
+const Articles = (props) => (
+  <div className="ArticlesComponent">
+    <h3> article listings </h3>
+    {props.articles.map(article =>
+      <div key={article.id} className="ArticleCard">
+        <p>{article.title}</p>
       </div>
-    );
-  }
-}
+    )}
+  </div>
+)
+
+export default Articles
