@@ -1,7 +1,7 @@
 import React, { Component } from 'react'
-// import 'App.css'
 import ArticlesContainer from './ArticlesContainer.js'
-
+import 'App.css'
+// import { Container, Header, Segment, Button, Icon, Dimmer, Loader, Divider } from 'semantic-ui-react'
 class App extends Component {
   render() {
     return (
