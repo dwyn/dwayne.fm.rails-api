@@ -8,6 +8,7 @@ Rails.application.routes.draw do
   scope '/api' do
     resources :articles, only: [:index, :show]
     resources :projects, only: [:index, :show]
+    resources :users, only: :show
   end
   
   # Rails to pass any HTML requests that it doesnt catch to React
