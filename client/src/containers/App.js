@@ -11,7 +11,7 @@ class App extends Component {
       
       <div className="App">
 
-        {/* <NavigationContainer /> */}
+        <NavigationContainer />
         <ArticlesContainer />
         {/* <FooterContainer /> */}
         

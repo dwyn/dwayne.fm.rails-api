@@ -1,4 +1,5 @@
 import React, { Component } from 'react'
+import UserCard from '../components/UserCard.jsx'
 
 
 class NavigationContainer extends Component {
@@ -14,11 +15,11 @@ class NavigationContainer extends Component {
   }
 
   getUser() {
-    fetch('/api/user/1')
+    fetch('/api/users/1')
       .then(response => response.json())
-      .then(user => {
-        if (user) {
-          this.setState({ userInfo: userInfo })
+      .then(userData => {
+        if (userData) {
+          this.setState({ userInfo: userData })
         } else {
           this.setState({ userInfo: [] })
         }
@@ -29,7 +30,7 @@ class NavigationContainer extends Component {
     return (
       <div className="NavigationContainer">
         <h3>Navigation Pane!</h3>
-        )}
+        <UserCard userInfo={this.state.userInfo}/>
       </div>
     )
   }

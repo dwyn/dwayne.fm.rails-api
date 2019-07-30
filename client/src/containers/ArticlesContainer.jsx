@@ -1,5 +1,5 @@
 import React, { Component } from 'react'
-import ArticleCard from '../components/ArticleCard'
+import ArticleCard from '../components/ArticleCard.jsx'
 
 class ArticlesContainer extends Component {
   constructor(props) {
