@@ -9,3 +9,9 @@
   - https://console.cloud.google.com/freetrial/signup/billing/US?_ga=2.28723324.-110642046.1564466344&pli=1
 
   
+
+  Notes
+  I am using Bootstrap react AND styled-components. Im really turning it up a notch here😂
+
+  styled components
+  https://www.styled-components.com/

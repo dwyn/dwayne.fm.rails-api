@@ -1,6 +1,14 @@
 // @flow
 import React, { Component } from 'react'
+
 import UserCard from '../components/UserCard.jsx'
+
+const divStyle = {
+
+  margin: '5px',
+  padding: '10px',
+  border: '2px solid #100431'
+};
 
 
 class NavigationContainer extends Component {
@@ -29,9 +37,9 @@ class NavigationContainer extends Component {
 
   render() {
     return (
-      <div className="NavigationContainer">
+      <div className="NavigationContainer" style={divStyle}>
         <h3>Navigation Pane!</h3>
-        <UserCard userInfo={this.state.userInfo}/>
+        <UserCard userInfo={this.state.userInfo} />
       </div>
     )
   }

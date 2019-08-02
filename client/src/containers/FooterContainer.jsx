@@ -3,23 +3,21 @@ import React, { Component } from 'react'
 
 
 var style = {
-  backgroundColor: "#100431",
-  color: "#bf928a",
-  borderTop: "1px solid #E7E7E7",
+  margin: '5px',
+  padding: '10px',
+  border: '2px solid #100431',
   textAlign: "center",
-  padding: "20px",
   position: "fixed",
-  left: "0",
   bottom: "0",
-  height: "55px",
-  width: "100%",
+  height: "15px",
+  width: "100vw",
 };
 
 class FooterContainer extends Component {
   render() {
     return (
       <div className="NavigationContainer" style={style}>
-        <p>footer?</p>
+        <span>footer?</span>
       </div>
     )
   }
