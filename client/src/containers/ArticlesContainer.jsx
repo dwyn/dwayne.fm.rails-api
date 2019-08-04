@@ -35,7 +35,8 @@ class ArticlesContainer extends Component {
   render() {
     return (
       <div className="ArticlesContainer" style={divStyle} >
-        <h3>Articles or whatever</h3>
+        
+        <h3>I am the parent component</h3>
         {this.state.articles.map(article =>
           <ArticleCard key={article.id} article={article} />
         )}

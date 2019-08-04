@@ -9,16 +9,14 @@ gem 'devise'
 gem 'activeadmin'
 gem 'faker', :git => 'https://github.com/stympy/faker.git', :branch => 'master'
 gem 'foreman'
-gem 'capistrano'
-gem 'capistrano-rails'
-gem 'capistrano-passenger'
-gem 'capistrano-rvm'
 # Use Rack CORS for handling Cross-Origin Resource Sharing (CORS), making cross-origin AJAX possible
 gem 'rack-cors'
+gem 'pg'
+ gem 'sqlite3'
 
 group :development, :test do
   # Call 'byebug' anywhere in the code to stop execution and get a debugger console
-  gem 'sqlite3'
+  gem 'pg'
   # gem 'byebug', platforms: [:mri, :mingw, :x64_mingw]
 end
 
