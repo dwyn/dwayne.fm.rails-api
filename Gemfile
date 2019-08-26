@@ -14,12 +14,10 @@ gem 'rack-cors'
 gem 'pg'
 gem 'dotenv-rails'
 gem 'graphql'
+gem "graphiql-rails"
 
-group :development, :test do
-  # Call 'byebug' anywhere in the code to stop execution and get a debugger console
-  gem 'pg'
-  # gem 'byebug', platforms: [:mri, :mingw, :x64_mingw]
-end
+# group :development, :test do
+# end
 
 group :development do
   gem 'pry-rails'
