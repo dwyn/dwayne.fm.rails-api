@@ -13,7 +13,7 @@ gem 'foreman'
 gem 'rack-cors'
 gem 'pg'
 gem 'dotenv-rails'
-#  gem 'sqlite3'
+gem 'graphql'
 
 group :development, :test do
   # Call 'byebug' anywhere in the code to stop execution and get a debugger console
