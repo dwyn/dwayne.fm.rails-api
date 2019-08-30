@@ -15,6 +15,7 @@ gem 'pg'
 gem 'dotenv-rails'
 gem 'graphql'
 gem "graphiql-rails"
+gem "nokogiri", ">= 1.10.4" # I got some weird warning about Nokogiri https://github.com/dwyn/dwayne.fm.rails/network/alerts
 
 # group :development, :test do
 # end
