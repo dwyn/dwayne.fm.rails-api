@@ -21,3 +21,5 @@ AdminUser.create!(
     published_at: Time.zone.now
   )
 end
+
+p 'Fin.'

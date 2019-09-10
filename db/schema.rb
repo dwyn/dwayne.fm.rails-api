@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2019_07_30_055959) do
+ActiveRecord::Schema.define(version: 2019_09_10_061238) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -54,17 +54,21 @@ ActiveRecord::Schema.define(version: 2019_07_30_055959) do
     t.string "name", default: "", null: false
     t.string "email", default: "", null: false
     t.string "encrypted_password", default: "", null: false
+    t.string "reset_password_token"
+    t.datetime "reset_password_sent_at"
     t.datetime "remember_created_at"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+    t.index ["email"], name: "index_admin_users_on_email", unique: true
+    t.index ["reset_password_token"], name: "index_admin_users_on_reset_password_token", unique: true
   end
 
   create_table "articles", force: :cascade do |t|
     t.bigint "admin_user_id"
-    t.string "title"
-    t.text "body"
-    t.text "description"
-    t.integer "wordcount"
+    t.string "title", default: "", null: false
+    t.text "body", default: "", null: false
+    t.text "description", default: "", null: false
+    t.integer "wordcount", default: 0, null: false
     t.datetime "published_at"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
@@ -72,9 +76,9 @@ ActiveRecord::Schema.define(version: 2019_07_30_055959) do
   end
 
   create_table "projects", force: :cascade do |t|
-    t.string "title"
-    t.text "description"
-    t.string "link"
+    t.string "title", default: "", null: false
+    t.text "description", default: "", null: false
+    t.string "link", default: "", null: false
     t.bigint "admin_user_id"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
