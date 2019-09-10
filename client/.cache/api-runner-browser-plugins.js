@@ -1,6 +1,6 @@
 module.exports = [{
       plugin: require('/Users/dwyn/Development/code.2/dwayne.FM.rails/client/node_modules/gatsby-remark-images/gatsby-browser.js'),
-      options: {"plugins":[],"maxWidth":1400,"linkImagesToOriginal":false,"withWebp":{"quality":80}},
+      options: {"plugins":[],"maxWidth":1400,"linkImagesToOriginal":false,"withWebp":{"quality":100}},
     },{
       plugin: require('/Users/dwyn/Development/code.2/dwayne.FM.rails/client/node_modules/gatsby-remark-autolink-headers/gatsby-browser.js'),
       options: {"plugins":[]},

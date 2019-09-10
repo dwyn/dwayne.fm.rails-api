@@ -2,9 +2,6 @@ Rails.application.routes.draw do
   
   post "/graphql", to: "graphql#execute"
 
-  
-  
-  devise_for :users, ActiveAdmin::Devise.config
   devise_for :admin_users, ActiveAdmin::Devise.config
   ActiveAdmin.routes(self)
   
@@ -17,7 +14,7 @@ Rails.application.routes.draw do
   
   
   if Rails.env.development?
-    authenticate :user do
+    authenticate :admin_user do
       mount GraphiQL::Rails::Engine, at: "/graphiql", graphql_path: "/graphql"
     end
   end
