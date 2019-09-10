@@ -1,8 +1,8 @@
 module Types
   class UserType < Types::BaseObject
-    field :name, String, null: true
-    field :email, String, null: true
-    field :articles, [Types::ArticleType], null: true
-    # field :projects, [Types::ProjectType], null: true
+    field :name, String, null: false
+    field :email, String, null: false
+    field :articles, [Types::ArticleType], null: false
+    # field :projects, [Types::ProjectType], null: false
   end
 end

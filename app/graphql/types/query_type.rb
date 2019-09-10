@@ -3,9 +3,10 @@ module Types
     # Add root-level fields here.
     # They will be entry points for queries on your schema.
 
-    field :users, [Types::UserType], null: false
+    field :users, [UserType], null: false
+    
     def users
-      User.all
+      AdminUser.all
     end
 
     field :user, Types::UserType, null: false do 
@@ -13,7 +14,7 @@ module Types
     end
 
     def user(id:)
-      User.find(id)
+      AdminUser.find(id)
     end
   end
 end
