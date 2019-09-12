@@ -4,6 +4,19 @@ lock "~> 3.11.0"
 set :application, "dwayne.fm.rails"
 set :repo_url, "git@github.com:dwyn/dwayne.fm.rails.git"
 
+# Deploy to the user's home directory
+set :deploy_to, "/home/dwieb/#{fetch :application}"
+
+append :linked_dirs, 'log', 'tmp/pids', 'tmp/cache', 'tmp/sockets', 'vendor/bundle', '.bundle', 'public/system', 'public/uploads'
+
+# Only keep the last 5 releases to save disk space
+set :keep_releases, 5
+
+# Optionally, you can symlink your database.yml and/or secrets.yml file from the shared directory during deploy
+# This is useful if you don't want to use ENV variables
+# append :linked_files, 'config/database.yml', 'config/secrets.yml'
+
+
 # Default branch is :master
 # ask :branch, `git rev-parse --abbrev-ref HEAD`.chomp
 
@@ -37,3 +50,5 @@ append :linked_dirs, "log", "tmp/pids", "tmp/cache", "tmp/sockets", "public/syst
 
 # Uncomment the following to require manually verifying the host key before first deploy.
 # set :ssh_options, verify_host_key: :secure
+
+# deploy.rb or stage file (staging.rb, production.rb or else)

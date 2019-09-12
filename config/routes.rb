@@ -7,17 +7,17 @@ Rails.application.routes.draw do
   ActiveAdmin.routes(self)
   
   
-  scope '/api' do
-    resources :articles, only: [:index, :show]
-    resources :projects, only: [:index, :show]
-    resources :users, only: :show
-  end
+  # scope '/api' do
+  #   resources :articles, only: [:index, :show]
+  #   resources :projects, only: [:index, :show]
+  #   resources :users, only: :show
+  # end
   
   
   if Rails.env.development?
-    authenticate :admin_user do
+    # authenticate :admin_user do
       mount GraphiQL::Rails::Engine, at: "/graphiql", graphql_path: "/graphql"
-    end
+    # end
   end
 
 

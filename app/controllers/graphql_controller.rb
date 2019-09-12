@@ -1,5 +1,5 @@
 class GraphqlController < ApplicationController
-  before_action :authenticate_admin_user!
+  # before_action :authenticate_admin_user!
 # binding.pry
   def execute
     variables = ensure_hash(params[:variables])
@@ -7,7 +7,7 @@ class GraphqlController < ApplicationController
     operation_name = params[:operationName]
     context = {
       # Query context goes here, for example:
-      current_user: current_admin_user,
+      # current_user: current_admin_user,
     }
     result = DwayneFmRailsSchema.execute(query, variables: variables, context: context, operation_name: operation_name)
     render json: result

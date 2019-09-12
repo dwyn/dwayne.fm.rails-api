@@ -17,6 +17,11 @@ gem 'graphql'
 gem "graphiql-rails"
 gem "nokogiri", ">= 1.10.4" # I got some weird warning about Nokogiri https://github.com/dwyn/dwayne.fm.rails/network/alerts
 
+gem 'capistrano', '~> 3.11'
+gem 'capistrano-rails', '~> 1.4'
+gem 'capistrano-passenger', '~> 0.2.0'
+gem 'capistrano-rvm'
+
 # group :development, :test do
 # end
 
