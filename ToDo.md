@@ -11,7 +11,4 @@
   
 
   Notes
-  I am using Bootstrap react AND styled-components. Im really turning it up a notch here😂
-
-  styled components
-  https://www.styled-components.com/
+  1. Sttrrronnnggllllyyy considering GraphCMS for the backend (sorry rails!) https://graphcms.com/
